@@ -57,7 +57,7 @@ harakiri-verbose = true
 #pidfile = /var/run/uwsgi.pid
 #日志
 daemonize = /www/wwwlogs/uwsgi.log
-#日志文件大小,KB
+#日志文件大小,字节
 log-maxsize=10240
 ```
 *提示wsgi中找不到django模块,则手动将python虚拟环境的site-packages目录加入到环境变量中*
