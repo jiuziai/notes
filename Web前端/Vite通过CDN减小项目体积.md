@@ -3,7 +3,7 @@
 ***
 - ## package.json 
 
-```
+```json
 {
   "name": "vite",
   "private": true,
@@ -27,7 +27,7 @@
 ```
 ***
 - ## vite.config.js
-```
+```js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'

@@ -2,7 +2,7 @@
 > ### (Python Web开发环境)
 ***
 - ## Nginx配置
-```
+```ini
 server {
         listen       80;
         server_name  localhost;
@@ -19,7 +19,7 @@ server {
 ```
 ***
 - ## uwsgi配置
-```
+```ini
 [uwsgi]
 #监视python模块自动重载
 #生产环境建议关闭
@@ -62,7 +62,7 @@ log-maxsize=10240
 ```
 *提示wsgi中找不到django模块,则手动将python虚拟环境的site-packages目录加入到环境变量中*
 - eg : *将下方代码加入到wsgi入口引用django之前*
-```
+```py
 import sys
 sys.path.append('/path/python3.11/site-packages')
 ```
