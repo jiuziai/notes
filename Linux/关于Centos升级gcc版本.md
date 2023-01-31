@@ -1,4 +1,4 @@
-# CentOS 7 升级gcc版本
+# 关于Centos升级gcc版本
 
 ```shell
 yum install centos-release-scl
