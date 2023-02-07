@@ -1,29 +1,9 @@
 # Vite下使用CDN实例
 > ### vite+vue3+view ui plus开发环境
 ***
-- ## package.json 
-
-```json
-{
-  "name": "vite",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-legacy": "^3.0.1",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "terser": "^5.16.1",
-    "view-ui-plus": "^1.3.1",
-    "vite": "^4.0.0",
-    "vite-plugin-cdn-import": "^0.3.5",
-    "vue": "^3.2.45"
-  }
-}
+- ## 安装插件
+```shell
+npm install vite-plugin-cdn-import
 ```
 ***
 - ## vite.config.js
@@ -40,6 +20,7 @@ export default defineConfig({
     legacy({
       targets: ['defaults', 'not IE 11'],
     }),
+    // 只有打包CDN才生效,开发环境需本地安装
     importToCDN({
       modules: [
         {
