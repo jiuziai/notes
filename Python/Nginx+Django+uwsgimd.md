@@ -62,7 +62,7 @@ log-maxsize=1024000
 ```
 ***
 - ## uwsgi配置
-添加uwsgi服务
+创建服务 /etc/systemd/system/uwsgi.service
 ```shell
 [Unit]
 Description=uWSGI Service
@@ -73,6 +73,12 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
+```
+启用uwsgi.service服务
+```shell
+systemctl daemon-reload
+systemctl enable uwsgi
+systemctl start uwsgi
 ```
 settings.py
 ```python
