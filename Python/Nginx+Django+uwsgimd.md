@@ -2,7 +2,7 @@
 > ### (Python Web开发环境)
 ***
 - ## Nginx配置
-```properties
+```
 server {
         listen       80;
         server_name  localhost;
