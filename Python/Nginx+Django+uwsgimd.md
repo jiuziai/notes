@@ -2,7 +2,7 @@
 > ### (Python Web开发环境)
 ***
 - ## Nginx配置
-```ini
+```properties
 server {
         listen       80;
         server_name  localhost;
@@ -63,7 +63,7 @@ log-maxsize=1024000
 ***
 - ## uwsgi配置
 创建服务 /etc/systemd/system/uwsgi.service
-```shell
+```ini
 [Unit]
 Description=uWSGI Service
 
@@ -75,7 +75,7 @@ Restart=always
 WantedBy=multi-user.target
 ```
 启用uwsgi.service服务
-```shell
+```bash
 systemctl daemon-reload
 systemctl enable uwsgi
 systemctl start uwsgi

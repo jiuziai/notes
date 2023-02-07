@@ -2,7 +2,7 @@
 > ### vite+vue3+view ui plus开发环境
 ***
 - ## 安装插件
-```shell
+```bash
 npm install vite-plugin-cdn-import
 ```
 ***
