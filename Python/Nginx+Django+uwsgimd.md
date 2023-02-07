@@ -60,9 +60,63 @@ daemonize = /www/wwwlogs/uwsgi.log
 #日志文件大小,字节
 log-maxsize=1024000
 ```
-*提示wsgi中找不到django模块,则手动将python虚拟环境的site-packages目录加入到环境变量中*
-- eg : *将下方代码加入到wsgi入口引用django之前*
+***
+- ## uwsgi配置
+添加uwsgi服务
+```shell
+[Unit]
+Description=uWSGI Service
+
+[Service]
+ExecStart=[/root/.pyenv/versions/web/bin]/uwsgi --ini /serve/uwsgi/uwsgi.ini
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+settings.py
+```python
+# 将apps添加进环境变量
+# 可将所有app放入其中,方便管理
+import os,sys
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+
+# Debug 仅建议开发环境开启
+DEBUG = True
+# Hosts 生产环境修改成相应域名
+ALLOWED_HOSTS = ['*']
+
+# 添加指定模板目录
+TEMPLATES = [
+    {
+        # ...
+        'DIRS': ['/www/wwwroot/example.com/templates'],
+        # 是否在对应app/templates中查找模板
+        'APP_DIRS': True,
+        # ...
+    },
+]
+
+# 语言
+LANGUAGE_CODE = 'zh-hans'
+# 时区
+TIME_ZONE = 'Asia/Shanghai'
+
+# 数据库
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'database',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+        'USER': 'usrename',
+        'PASSWORD': 'password',
+    }
+}
+```
+wsgi.py
 ```py
+# 找不到django模块解决方案
 import sys
 sys.path.append('/path/python3.11/site-packages')
 ```
