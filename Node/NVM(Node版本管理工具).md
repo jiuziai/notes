@@ -51,3 +51,20 @@ nvm use [vertion]
 ```shell
 nvm which [vertion]
 ```
+设置node镜像
+```shell
+# 清华: https://mirrors.tuna.tsinghua.edu.cn/
+# 华为: https://repo.huaweicloud.com/nodejs/
+# 阿里: https://npmmirror.com/mirrors/node/
+# 腾讯: https://mirrors.cloud.tencent.com/nodejs-release/
+nvm node_mirror [url]
+```
+设置npm 镜像
+```shell
+# 华为: https://repo.huaweicloud.com/npm-software/
+# 阿里: https://npmmirror.com/mirrors/npm/
+# 腾讯: https://mirrors.cloud.tencent.com/npm/
+nvm npm_mirror [url]
+```
+*其他源:*  
+*清华:https://mirrors.tuna.tsinghua.edu.cn/*  
