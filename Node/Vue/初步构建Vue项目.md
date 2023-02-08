@@ -1,5 +1,5 @@
 # 初步构建Vue项目
->### Vue3, Vue-router, ViewUIPlus, TypeScript,Vite
+>### Vue3 + Vite
 
 ***
 - ## package.json
