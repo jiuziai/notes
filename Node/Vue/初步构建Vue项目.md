@@ -1,5 +1,5 @@
 # 初步构建Vue项目
->### Vue3 + Vite
+>### Vue3 + Vite + Naive-UI
 
 ***
 - ## package.json
@@ -12,7 +12,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vue-tsc && vite build",
+        "build": "vite build",
         "preview": "vite preview"
     },
     "devDependencies": {
@@ -84,7 +84,6 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: 'src/index.html',
-                serve: 'src/serve.html',
             },
         },
         // 输出目录
@@ -97,7 +96,8 @@ export default defineConfig({
 ```bash
 mkdir vue-project
 cd vue-project
-touch package.json vite.config.js
+mkdir src components assets router
+touch package.json vite.config.js src/index.html
 # 将上方的内容分别写入 package.json 和 vite.config.js
 npm i
 ```
