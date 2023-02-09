@@ -8,7 +8,23 @@
     输入``pwsh``打开PowerShell
     在PowerShell中输入``start-process PowerShell -verb runas``提升终端窗口至管理员权限
     在新的PowerShell窗口中输入以下命令:
-    ```pwsh
-    #
+    ```powershell
+    # VSCode中文插件
     code --install-extension ms-ceintl.vscode-language-pack-zh-hans
+    # Python扩展
+    code --install-extension ms-python.python
+    # Python语言支持
+    code --install-extension ms-python.vscode-pylance
+    # 代码智能提示
+    code --install-extension visualstudioexptteam.vscodeintellicode
+    code --install-extension 
+    code --install-extension
+    code --install-extension
+    code --install-extension
+    code --install-extension
+    code --install-extension
+    code --install-extension
+    code --install-extension
+    code --install-extension
+    code --install-extension
     ```
