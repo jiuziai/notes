@@ -7,6 +7,8 @@
     按 ```WIN``` + ```R``` 开打运行窗口  
     输入``pwsh``打开PowerShell
     在PowerShell中输入``start-process PowerShell -verb runas``提升终端窗口至管理员权限
-    ```
+    在新的PowerShell窗口中输入以下命令:
+    ```pwsh
+    #
     code --install-extension ms-ceintl.vscode-language-pack-zh-hans
     ```
