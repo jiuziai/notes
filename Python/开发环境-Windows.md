@@ -79,6 +79,9 @@ Function Main() {
             python -m pip install --upgrade pip
             # 安装 virtualenv 虚拟环境
             python -m pip install virtualenv
+            # 禁止 pip 全局安装
+            [System.Environment]::SetEnvironmentVariable('PIP_REQUIRE_VIRTUALENV', 'true', "User")
+            $Env:PIP_REQUIRE_VIRTUALENV = 'true'
         }
         catch {
             exit
