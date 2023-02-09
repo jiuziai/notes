@@ -4,7 +4,7 @@
 
 [前往官网下载VSCode](https://code.visualstudio.com/)
 
-  
+***
 将下方代码保存为`install.ps1`并运行
 ```ps1
 # 提升至管理员权限
