@@ -1,5 +1,5 @@
 # Windows 下搭建 Python 开发环境
-> ### 使用 ```VSCode``` + ```pyenv``` + ```pyenv-virtualenv``` 搭建Python开发环境
+> ### 使用 ```VSCode``` + ```pyenv``` + ```virtualenv``` 搭建Python开发环境
 ***
 
 [前往官网下载VSCode](https://code.visualstudio.com/)
@@ -75,6 +75,10 @@ Function Main() {
             pyenv install 3.11.1
             # 设定 Python 3.11.1 为全局版本
             pyenv global 3.11.1
+            # 升级 pip 为最新版本
+            python -m pip install --upgrade pip
+            # 安装 virtualenv 虚拟环境
+            python -m pip install virtualenv
         }
         catch {
             exit
