@@ -6,7 +6,7 @@
 
 ***
 将下方代码保存为`install.ps1`并运行
-```ps1
+```PowerShell
 # 提升至管理员权限
 Set-ExecutionPolicy -Scope Process Unrestricted
 # 设置字符集,防止中文乱码
