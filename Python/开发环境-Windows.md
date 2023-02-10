@@ -2,10 +2,12 @@
 > ### 使用 ```VSCode``` + ```pyenv``` + ```virtualenv``` 搭建Python开发环境
 ***
 
-[前往官网下载VSCode](https://code.visualstudio.com/)
+[前往官网下载VSCode](https://code.visualstudio.com/)  
+如果 PowerShell 版本低于 7, 点击下方链接安装 PowerShell 7  
+[Microsoft Store](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
 
 ***
-将下方代码保存为`install.ps1`并运行
+将下方代码保存为`install.ps1`并用 PowerShell 7 运行
 ```
 <#
 <#
