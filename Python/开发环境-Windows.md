@@ -7,7 +7,10 @@
 [Microsoft Store](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
 
 ***
-将下方代码保存为`install.ps1`并用 PowerShell 7 运行
+- 将下方代码保存为`install.ps1`并用 PowerShell 7 运行  
+*可将脚本直接拖入终端窗口*  
+*`WIN`+`R`输入 `pwsh` 运行 PowerShell*  
+*在 PowerShell 中输入 `pwsh -v` 查看版本*
 ```
 <#
 <#
