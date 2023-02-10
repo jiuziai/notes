@@ -8,6 +8,7 @@
 将下方代码保存为`install.ps1`并运行
 ```
 <#
+<#
 
     1,安装VSCode
     2,运行此脚本
@@ -30,6 +31,9 @@
         安装完成后再输入 $Env:PIP_REQUIRE_VIRTUALENV = 'true'
         尽量保持在虚拟环境开发和安装项目需要的包
 
+    警告:
+        此脚本基于 PowerShell 7+,请确定 PowerShell 版本是否满足要求,并使用 PowerShell 7+ 运行此脚本
+
 #>
 
 
@@ -37,6 +41,7 @@
 Set-ExecutionPolicy -Scope Process Unrestricted
 # 设置字符集,防止中文乱码
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 
 # 安装VSCode扩展
 Function Install-VSCodePlugs() {
@@ -117,9 +122,8 @@ Function Main() {
             
             Install-VSCodePlugs
             Clear-Host
-            Write-Host "准备就绪 请尝试:"
-            ""
-            "print('Hello World')"
+            Set-Clipboard "print('Hello World')"
+            Write-Host "准备就绪 print('Hello World') 已复制进剪切板,粘贴即可尝试第一个Python程序."
             ""
             python
         }
