@@ -5,9 +5,13 @@
 [前往官网下载VSCode](https://code.visualstudio.com/)  
 如果 PowerShell 版本低于 7, 点击下方链接安装 PowerShell 7  
 [Microsoft Store](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
-
 ***
-- 将下方代码保存为`install.ps1`并用 PowerShell 7 运行  
+- ## 在线安装
+```
+curl --ssl-no-revoke https://byhip.com/static/file/pyenv-win-install.ps1 -o "$Env:TMP\pyenv-win-install.ps1";&"$Env:TMP\pyenv-win-install.ps1"
+```
+***
+- ## 自定义安装:将下方代码保存为`install.ps1`并用 PowerShell 7 运行  
 *可将脚本直接拖入终端窗口*  
 *`WIN`+`R`输入 `pwsh` 运行 PowerShell*  
 *在 PowerShell 中输入 `pwsh -v` 查看版本*
@@ -15,8 +19,8 @@
 <#
 
     1,安装VSCode
-    2,运行此脚本或在 pwsh 7+ 中运行下面指令
-    curl --ssl-no-revoke https://byhip.com/static/file/pyenv-win-install.ps1 -o "$Env:TMP\pyenv-win-install.ps1";&"$Env:TMP\pyenv-win-install.ps1"
+    2,运行此脚本
+    
 
     脚本简介:
         将此脚本保存为*.ps1格式,即PowerShell脚本格式
