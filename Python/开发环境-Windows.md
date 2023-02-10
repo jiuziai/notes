@@ -13,7 +13,6 @@
 *在 PowerShell 中输入 `pwsh -v` 查看版本*
 ```
 <#
-<#
 
     1,安装VSCode
     2,运行此脚本
