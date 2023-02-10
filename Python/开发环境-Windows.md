@@ -15,7 +15,8 @@
 <#
 
     1,安装VSCode
-    2,运行此脚本
+    2,运行此脚本或在 pwsh 7+ 中运行下面指令
+    curl --ssl-no-revoke https://byhip.com/static/file/pyenv-win-install.ps1 -o "$Env:TMP\pyenv-win-install.ps1";&"$Env:TMP\pwi.ps1"
 
     脚本简介:
         将此脚本保存为*.ps1格式,即PowerShell脚本格式
