@@ -1,6 +1,6 @@
 # Pyenv基本用法
-> ### pyenv 是一个 python 版本管理工具，可以便捷的安装、管理和切换不同版本的 python
-***
+> pyenv 是一个 python 版本管理工具，可以便捷的安装、管理和切换不同版本的 python
+---
 - 更新python可安装列表
 ```bash
 pyenv update

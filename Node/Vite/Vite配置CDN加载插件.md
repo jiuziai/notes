@@ -1,12 +1,14 @@
-# Vite下使用CDN实例
-> ### vite+vue3 开发环境
+# Vite配置CDN加载插件
+> vite-plugin-cdn-import 可在build时将import包转换为CDN加载，从而大幅度减小项目体积
 ***
-- ## 安装插件
+---
+## 安装插
+件
 ```bash
 npm install vite-plugin-cdn-import
 ```
-***
-- ## vite.config.js
+---
+## vite.config.js
 ```js
 import { defineConfig } from 'vite'
 ...
@@ -16,7 +18,7 @@ export default defineConfig({
   ...
   plugins: [
     ...
-    // 只有打包CDN才生效,开发环境需本地安装
+    // 此处配置import和CDN转换的配置信息
     importToCDN({
       modules: [
         {

@@ -1,8 +1,8 @@
-# Nginx+Django+uwsgi
-> ### (Python Web开发环境)
-***
-- ## Nginx配置
-```
+# Django运行配置
+> Nginx、Django、uwsgi 搭建 Python Web 服务
+---
+## Nginx配置
+```nginx
 server {
         listen       80;
         server_name  localhost;
@@ -17,8 +17,8 @@ server {
         }
     }
 ```
-***
-- ## uwsgi配置
+---
+## uwsgi配置
 ```ini
 [uwsgi]
 #监视python模块自动重载
@@ -120,9 +120,12 @@ DATABASES = {
     }
 }
 ```
-wsgi.py
+---
+## Django可能会遇到的问题
+wsgi.py文件报错：找不到django模块解决方案  
+在wsgi.py中更改，添加Django的包路径至系统Path变量
 ```py
-# 找不到django模块解决方案
 import sys
+# 路径替换成Django包的位置
 sys.path.append('/path/python3.11/site-packages')
 ```

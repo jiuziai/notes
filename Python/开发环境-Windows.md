@@ -1,21 +1,15 @@
 # Windows 下搭建 Python 开发环境
-> ### 使用 ```VSCode``` + ```pyenv``` + ```virtualenv``` 搭建Python开发环境
-***
+> 使用 ```VSCode``` + ```pyenv``` + ```virtualenv``` 搭建Python开发环境
 
+---
+## VsCode安装
 [前往官网下载VSCode](https://code.visualstudio.com/)  
 如果 PowerShell 版本低于 7, 点击下方链接安装 PowerShell 7  
 [Microsoft Store](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
-***
-- ## 在线安装
-```
-curl --ssl-no-revoke https://byhip.com/static/file/pyenv-win-install.ps1 -o "$Env:TMP\pyenv-win-install.ps1";&"$Env:TMP\pyenv-win-install.ps1"
-```
-***
-- ## 自定义安装:将下方代码保存为`install.ps1`并用 PowerShell 7 运行  
-*可将脚本直接拖入终端窗口*  
-*`WIN`+`R`输入 `pwsh` 运行 PowerShell*  
-*在 PowerShell 中输入 `pwsh -v` 查看版本*
-```
+
+## PowerShell7自动化配置脚本
+
+```powershell
 <#
 
     1,安装VSCode
@@ -24,7 +18,7 @@ curl --ssl-no-revoke https://byhip.com/static/file/pyenv-win-install.ps1 -o "$En
 
     脚本简介:
         将此脚本保存为*.ps1格式,即PowerShell脚本格式
-        运行此脚本,如果访问Github不是很顺畅,则可以选择梯子或者输入 y 循环重试,直至成功(Ctrl+C强制终止)
+        运行此脚本,如果访问Github不是很顺畅,则可以科学上网或者输入 y 循环重试,直至成功(Ctrl+C强制终止)
 
     脚本功能:
         1,自动安装 Pyenv 版本管理器,并配置环型变量
