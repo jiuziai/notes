@@ -1,9 +1,9 @@
-# 初步构建Vue项目
->### Vue3 + Vite + Naive-UI
+# Vue项目基本配置
+>Vue3 + Vite + Naive-UI 项目基本配置信息，包含自动CDN转换功能
 
-***
-- ## package.json
-  因为使用CDN加速,所以全部包均可以放在devDependencies,build时无需打包
+---
+## package.json
+因为使用CDN加速,所以全部包均可以放在devDependencies,build时无需打包
 ```json
 {
     "name": "vue-project",
@@ -28,8 +28,8 @@
     }
 }
 ``` 
-***
-- ## vite.config.js配置
+---
+## vite.config.js配置
 ```js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -44,7 +44,7 @@ export default defineConfig({
         legacy({
             targets: ['defaults', 'not IE 11'],
         }),
-        // 只有打包CDN才生效,开发环境需本地安装
+        // 构建时，import自动转换为CDN加载
         importToCDN({
             modules: [
                 {
@@ -73,6 +73,7 @@ export default defineConfig({
         }
     },
     resolve: {
+        // 别名替换
         alias: [
             { find: /^@\//, replacement: `${resolve(__dirname, 'src')}/` },
             { find: /^~/, replacement: '' }
@@ -91,7 +92,7 @@ export default defineConfig({
     },
 })
 ```
-***
+---
 - ## 初始化项目
 ```bash
 mkdir vue-project
