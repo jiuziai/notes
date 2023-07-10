@@ -1,4 +1,4 @@
-# Windows 下搭建 Python 开发环境
+# Windows下搭建Python开发环境
 > 使用 ```VSCode``` + ```pyenv``` + ```virtualenv``` 搭建Python开发环境
 
 ---
