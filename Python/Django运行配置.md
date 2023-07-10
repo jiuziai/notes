@@ -1,7 +1,8 @@
 # Django运行配置
-> Nginx、Django、uwsgi 搭建 Python Web 服务
+> Nginx、Django、uWSGI 搭建 Python Web 服务
 ---
 ## Nginx配置
+用nginx给uWSGI做反代，同时也能解决负载均衡、静态资源请求、加密证书等问题
 ```nginx
 server {
         listen       80;
@@ -18,7 +19,9 @@ server {
     }
 ```
 ---
-## uwsgi配置
+## uWSGI配置
+- 创建配置文件  
+*/serve/uwsgi/uWSGI.ini*
 ```ini
 [uwsgi]
 #监视python模块自动重载
@@ -60,27 +63,32 @@ daemonize = /www/wwwlogs/uwsgi.log
 #日志文件大小,字节
 log-maxsize=1024000
 ```
-***
-- ## uwsgi配置
-创建服务 /etc/systemd/system/uwsgi.service
+---
+## uWSGI服务
+- 创建服务  
+*/etc/systemd/system/uWSGI.service*
 ```ini
 [Unit]
 Description=uWSGI Service
 
 [Service]
-ExecStart=[/root/.pyenv/versions/web/bin]/uwsgi --ini /serve/uwsgi/uwsgi.ini
+ExecStart=[/root/.pyenv/versions/web/bin]/uwsgi --ini /serve/uwsgi/uWSGI.ini
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
 ```
-启用uwsgi.service服务
+- 启动服务  
+*uWSGI.service*
 ```bash
 systemctl daemon-reload
-systemctl enable uwsgi
-systemctl start uwsgi
+systemctl enable uWSGI
+systemctl start uWSGI
 ```
-settings.py
+
+---
+## Django配置
+- settings.py
 ```python
 # 将apps添加进环境变量
 # 可将所有app放入其中,方便管理
@@ -120,11 +128,11 @@ DATABASES = {
     }
 }
 ```
----
-## Django可能会遇到的问题
-wsgi.py文件报错：找不到django模块解决方案  
-在wsgi.py中更改，添加Django的包路径至系统Path变量
+- 可能会遇到的问题
+  - wsgi.py文件报错：找不到django模块解决方案  
 ```py
+#在wsgi.py中更改，添加Django的包路径至系统Path变量
+
 import sys
 # 路径替换成Django包的位置
 sys.path.append('/path/python3.11/site-packages')
