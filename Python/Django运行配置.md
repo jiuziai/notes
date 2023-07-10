@@ -2,7 +2,9 @@
 > Nginx、Django、uWSGI 搭建 Python Web 服务
 ---
 ## Nginx配置  
+
 用nginx给uWSGI做反代，同时也能解决负载均衡、静态资源请求、加密证书等问题  
+
 ```nginx
 server {
         listen       80;
