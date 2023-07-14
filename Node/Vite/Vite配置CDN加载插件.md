@@ -2,13 +2,16 @@
 > vite-plugin-cdn-import 可在build时将import包转换为CDN加载，从而大幅度减小项目体积
 ***
 ---
-## 安装插
-件
+## 安装插件  
+  
+
 ```bash
 npm install vite-plugin-cdn-import
 ```
 ---
-## vite.config.js
+## vite.config.js  
+  
+  
 ```js
 import { defineConfig } from 'vite'
 ...

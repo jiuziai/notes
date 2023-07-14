@@ -7,7 +7,7 @@ pyenv update
 ```
 - 查询windows支持的python版本列表
 ```bash
-- pyenv install -l
+pyenv install -l
 ```
 - 安装指定python版本
 ```bash
