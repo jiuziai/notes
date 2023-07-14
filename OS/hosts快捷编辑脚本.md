@@ -6,13 +6,13 @@
 1. 根据hosts文件位置修改变量```hostsPath```  
 
 2. 安装依赖包：  
-```go get -u github.com/PuerkitoBio/goquery```  
+    ```go get -u github.com/PuerkitoBio/goquery```  
 
 3. 解决项目依赖：  
-```go mod tidy```  
+    ```go mod tidy```  
 
 4. 构建项目，生成可执行文件：  
-```go build```
+    ```go build```
 
 ## 代码
 ```go
