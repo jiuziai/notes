@@ -1,6 +1,6 @@
 # hosts快捷编辑脚本
 > 一个用go编写的快速编辑hosts文件的命令行工具，可根据域名从ipaddress.com中获取ip，在hosts文件中添加或者修改。
-
+---
 ## 使用  
 
 1. 根据hosts文件位置修改变量```hostsPath```  
@@ -13,7 +13,7 @@
 
 4. 构建项目，生成可执行文件：  
     ```go build```
-
+---
 ## 代码
 ```go
 package main

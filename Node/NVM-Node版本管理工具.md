@@ -1,14 +1,18 @@
 # NVM-Node版本管理工具
 > [*项目地址(linux版)*](https://github.com/nvm-sh/nvm)  
-> [*项目地址(windows版)*](https://github.com/coreybutler/nvm-windows) 
+> [*项目地址(windows版)*](https://github.com/coreybutler/nvm-windows)   
+
+
 ---
-## Linux
+## Linux  
+
 ### 安装
 ```bash
 cd ~
 git clone https://github.com/nvm-sh/nvm.git .nvm
 ./.nvm/nvm.sh
-```
+```  
+
 ### 配置
 在用户配置文件中添加环境变量
 - *bash*
@@ -32,10 +36,12 @@ echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.profile
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.profile
 echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.profile
 source ~/.profile
-```
+```  
+
 ---
 ## Windows
-Windows版有安装版和不安装版本，不安装板本包含一键设置脚本，无需特别配置。  
+Windows版有安装版和不安装版本，不安装板本包含一键设置脚本，无需特别配置。   
+
 
 ---
 ## 基本用法
@@ -70,7 +76,8 @@ nvm use [vertion]
 - 获取可执行文件的安装路径
 ```bash
 nvm which [vertion]
-```
+```  
+
 ---
 ## 国内镜像源
 - 设置node镜像

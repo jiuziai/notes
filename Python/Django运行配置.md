@@ -1,5 +1,7 @@
 # Django运行配置
-> Nginx、Django、uWSGI 搭建 Python Web 服务
+> Nginx、Django、uWSGI 搭建 Python Web 服务  
+
+
 ---
 ## Nginx配置  
 
@@ -19,7 +21,9 @@ server {
             client_max_body_size 35m;
         }
     }
-```
+```  
+
+
 ---
 ## uWSGI配置
 - 创建配置文件  
@@ -64,7 +68,9 @@ harakiri-verbose = true
 daemonize = /www/wwwlogs/uwsgi.log
 #日志文件大小,字节
 log-maxsize=1024000
-```
+```  
+
+
 ---
 ## uWSGI服务
 - 创建服务  
@@ -86,7 +92,8 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 systemctl enable uWSGI
 systemctl start uWSGI
-```
+```  
+
 
 ---
 ## Django配置

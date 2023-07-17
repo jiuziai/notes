@@ -1,5 +1,6 @@
 # Vue项目基本配置
 >Vue3 + Vite + Naive-UI 项目基本配置信息，包含自动CDN转换功能
+ 
 
 ---
 ## package.json  
@@ -30,7 +31,8 @@
         "vue-router": "^4.1.6"
     }
 }
-``` 
+```   
+
 ---
 ## vite.config.js配置  
   
@@ -96,9 +98,10 @@ export default defineConfig({
         outDir: 'public',
     },
 })
-```
+```  
+
 ---
-- ## 初始化项目
+## 初始化项目
 ```bash
 mkdir vue-project
 cd vue-project

@@ -6,7 +6,8 @@
 [前往官网下载VSCode](https://code.visualstudio.com/)  
 如果 PowerShell 版本低于 7, 点击下方链接安装 PowerShell 7  
 [Microsoft Store](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
-
+  
+---
 ## PowerShell7自动化配置脚本
 
 ```powershell
